@@ -1,6 +1,11 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 from mmengine.utils import is_str
 
+def je_classes():
+    return ['background', 'chip','crack','grinding','contamination','dent','sticky']
+
+def je_palette():
+    return [[0, 0, 0], [255, 0, 0], [0, 255, 0], [0, 0, 255], [128, 128, 128], [255, 255, 0], [0, 255, 255]]
 
 def cityscapes_classes():
     """Cityscapes class names for external use."""
@@ -420,6 +425,7 @@ def lip_palette():
 
 
 dataset_aliases = {
+    'je': ['je'],
     'cityscapes': ['cityscapes'],
     'ade': ['ade', 'ade20k'],
     'voc': ['voc', 'pascal_voc', 'voc12', 'voc12aug'],
